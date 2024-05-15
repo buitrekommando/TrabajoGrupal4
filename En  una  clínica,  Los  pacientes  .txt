@@ -1,0 +1,22 @@
+En  una  clínica,  Los  pacientes  ingresan  y  se  les  asigna  una  cama. 
+
+Las  camas  están  en  habitaciones,  y  cada  una  de  estas  tiene  muchas  camas.  Cada  paciente  tiene  asignado  un  
+médico  el  cual  puede  tratar  a  muchos  pacientes.  
+
+El  médico  puede  ordenar  diferentes  
+exámenes para un paciente, estos exámenes están tipificados y en la orden de examen, el 
+médico  indica  un  posible  diagnóstico.  
+El  paciente  puede  cambiar  de  médico  durante  su  
+estadía en el hospital.
+ Cada médico puede o pudo diagnosticar una o más enfermedades a 
+un paciente. Las enfermedades están tipificadas, sin embargo, el médico debe especificar 
+qué exámenes de laboratorio consideró para el diagnóstico de cada enfermedad.”
+
+clinica
+pacientes
+habitaciones
+camas
+medicos
+examenes
+enfermedades
+diagnosticos
