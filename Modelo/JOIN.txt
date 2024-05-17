@@ -1,0 +1,100 @@
+Para realizar las consultas y operaciones que necesitas en PostgreSQL, aquí tienes los comandos SQL correspondientes:
+
+1. Mostrar los pacientes de la clínica con su RUT, nombre, diagnóstico, médico tratante y habitación:
+SQL
+
+SELECT 
+    pa.rut,
+    pa.primer_nombre || ' ' || pa.apellido_paterno AS nombre_paciente,
+    di.descripcion AS diagnostico,
+    me.primer_nombre || ' ' || me.apellido_paterno AS nombre_medico,
+    ha.numero AS numero_habitacion
+FROM 
+    public."Paciente" pa
+INNER JOIN 
+    public."Diagnostico" di ON pa.fk_id_diagnostico = di.idagnostico_id
+INNER JOIN 
+    public."Medico" me ON pa.fk_medico_id = me.medico_id
+INNER JOIN 
+    public."Habitacion" ha ON pa.fk_habitacion_id = ha.habitacion_id;
+
+--Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+
+2.Mostrar el detalle de un paciente por RUT, incluyendo el último examen realizado:
+SQL
+
+SELECT 
+    pa.rut,
+    pa.primer_nombre || ' ' || pa.apellido_paterno AS nombre_paciente,
+    di.descripcion AS diagnostico,
+    me.primer_nombre || ' ' || me.apellido_paterno AS nombre_medico,
+    ex.fecha AS fecha_ultimo_examen,
+    ha.numero AS numero_habitacion
+FROM 
+    public."Paciente" pa
+INNER JOIN 
+    public."Diagnostico" di ON pa.fk_id_diagnostico = di.idagnostico_id
+INNER JOIN 
+    public."Medico" me ON pa.fk_medico_id = me.medico_id
+INNER JOIN 
+    public."Examen" ex ON pa.paciente_id = ex.fk_paciente_id
+INNER JOIN 
+    public."Habitacion" ha ON pa.fk_habitacion_id = ha.habitacion_id
+WHERE 
+    pa.rut = 'rut_del_paciente'
+ORDER BY 
+    ex.fecha DESC
+LIMIT 1;
+
+
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Reemplaza 'rut_del_paciente' con el RUT específico del paciente que deseas consultar.
+
+3. Cambiar a un paciente de cama (asumiendo que fk_cama_id es la clave foránea en “Paciente” que referencia a una cama):
+SQL
+
+UPDATE 
+    public."Paciente"
+SET 
+    fk_cama_id = nuevo_fk_cama_id
+WHERE 
+    rut = 'rut_del_paciente';
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Reemplaza 'rut_del_paciente' con el RUT del paciente y nuevo_fk_cama_id con el ID de la nueva cama.
+
+
+4.Cambiar a un paciente de médico:
+SQL
+
+UPDATE 
+    public."Paciente"
+SET 
+    fk_medico_id = nuevo_fk_medico_id
+WHERE 
+    rut = 'rut_del_paciente';
+
+
+--Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+
+Reemplaza 'rut_del_paciente' con el RUT del paciente y nuevo_fk_medico_id con el ID del nuevo médico.
+
+5. Crear camas y habitaciones (asumiendo que no existen aún las tablas “Cama” y “Habitacion”):
+SQL
+
+CREATE TABLE public."Cama" (
+    cama_id SERIAL PRIMARY KEY,
+    numero_cama INTEGER NOT NULL,
+    fk_habitacion_id INTEGER REFERENCES public."Habitacion"(habitacion_id)
+);
+
+CREATE TABLE public."Habitacion" (
+    habitacion_id SERIAL PRIMARY KEY,
+    numero_habitacion INTEGER NOT NULL
+);
+
+
+
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Estos comandos crean las tablas con un ID autoincremental como clave primaria y establecen una relación entre camas y habitaciones.
+
+Asegúrate de ajustar los nombres de las columnas y las claves foráneas según el esquema de tu base de datos. Además, recuerda que para realizar actualizaciones o inserciones, debes tener los permisos adecuados en la base de datos123456.

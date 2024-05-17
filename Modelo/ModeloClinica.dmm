@@ -21,7 +21,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -494,7 +494,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -580,7 +580,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -667,7 +667,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -753,7 +753,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -904,7 +904,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -1017,7 +1017,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -1293,7 +1293,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -1378,7 +1378,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -1463,7 +1463,7 @@
 					"after": "",
 					"collation": null,
 					"pg": {
-						"generatedIdentity": "no",
+						"generatedIdentity": "default",
 						"generated": "",
 						"storage": "",
 						"compression": ""
@@ -1800,7 +1800,7 @@
 			"extra": 1
 		},
 		"writeFileParam": false,
-		"authorName": "",
+		"authorName": "Jose Luis Henriquez",
 		"companyDetails": "",
 		"companyUrl": "",
 		"def_coltopk": true,
@@ -1829,7 +1829,7 @@
 			"relations": true
 		},
 		"connectionVersion": "",
-		"lastSaved": 1715828430843
+		"lastSaved": 1715868825981
 	},
 	"otherObjects": {},
 	"diagrams": {
