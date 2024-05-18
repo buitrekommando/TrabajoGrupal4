@@ -15,8 +15,8 @@ INNER JOIN
     public."Examen" ex ON pa.paciente_id = ex.fk_paciente_id
 INNER JOIN 
     public."Habitacion" ha ON pa.fk_habitacion_id = ha.habitacion_id
---WHERE 
---pa.rut = 'rut_del_paciente'
+WHERE 
+pa.rut = 'rut_del_paciente'
 ORDER BY 
     ex.fecha DESC
-LIMIT 1;
+LIMIT 1,1;

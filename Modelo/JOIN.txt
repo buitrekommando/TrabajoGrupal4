@@ -94,7 +94,24 @@ CREATE TABLE public."Habitacion" (
 
 
 
-Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
-Estos comandos crean las tablas con un ID autoincremental como clave primaria y establecen una relación entre camas y habitaciones.
+ -- Agregar nuevas camas
 
-Asegúrate de ajustar los nombres de las columnas y las claves foráneas según el esquema de tu base de datos. Además, recuerda que para realizar actualizaciones o inserciones, debes tener los permisos adecuados en la base de datos123456.
+Para insertar nuevas camas y habitaciones en las tablas existentes “Cama” y “Habitacion” en PostgreSQL, puedes utilizar la sentencia INSERT. Aquí tienes un ejemplo de cómo hacerlo:
+
+Para insertar una nueva habitación:
+
+SQL
+
+INSERT INTO public."Habitacion" (numero_habitacion)
+VALUES (nuevo_numero_habitacion);
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Reemplaza nuevo_numero_habitacion con el número de la nueva habitación que deseas agregar.
+
+Para insertar una nueva cama asociada a una habitación:
+
+SQL
+
+INSERT INTO public."Cama" (numero_cama, fk_habitacion_id)
+VALUES (nuevo_numero_cama, id_habitacion_asociada);
+Código generado por IA. Revisar y usar cuidadosamente. Más información sobre preguntas frecuentes.
+Reemplaza nuevo_numero_cama con el número de la nueva cama y id_habitacion_asociada con el ID de la habitación a la que pertenecerá la cama1.
