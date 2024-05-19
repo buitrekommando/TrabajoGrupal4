@@ -6,7 +6,7 @@ def lista_pacientes():
         "host": "localhost",
         "database": "Clinica",
         "user": "postgres",
-        "password": "adobe16"
+        "password": "admin"
     }
 
     try:
